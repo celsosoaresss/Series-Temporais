@@ -6,74 +6,64 @@ Este repositório contém a atividade de observação e análise de séries temp
 
 O arquivo principal `atividade.ipynb` executa os seguintes passos:
 
-1. **Importação e Limpeza de Dados:** 
-   O código carrega as planilhas usando o `pandas` (`pd.read_excel`), permitindo a visualização da Quantidade em função do Ano e da Região/UF.
-2. **Análise Exploratória e Visualização:**
-   - Para cada região (Nordeste, Centro-Oeste, etc.), calcula estatísticas chave como média e desvio padrão.
-   - Apresenta através do `matplotlib` como a quantidade evolui anualmente no tempo para detectar à primeira vista o comportamento da série.
-3. **Decomposição da Série Temporal:**
-   Utiliza `seasonal_decompose` (da biblioteca `statsmodels`) para separar e analisar independentemente os componentes de Tendência, Sazonalidade e Resíduos.
-4. **Teste de Estacionaridade (Dickey-Fuller):**
-   Utiliza a função `adfuller` para descobrir de maneira estatística se uma região possui uma série temporal estacionária. Caso não tenha, ele aplica Diferenciação (ordens $d=1$ ou $d=2$) iterativamente para estabilizar a média e variância.
+1.  **Importação e Limpeza de Dados:** Uso do `pandas` para carga e estruturação por Ano e Região/UF.
+2.  **Análise Exploratória:** Cálculo de médias, desvios padrão e visualização temporal via `matplotlib`.
+3.  **Decomposição:** Separação de Tendência, Sazonalidade e Resíduos via `statsmodels`.
+4.  **Teste de Estacionaridade:** Aplicação do teste ADF e Diferenciação iterativa (ordens $d=1$ ou $d=2$) para estabilização da série.
 
 ---
 
 ## Fundamentação Teórica e Fórmulas
 
-Para um melhor entendimento das ferramentas aplicadas neste código, apresentamos abaixo o escopo teórico principal de uma base de Séries Temporais.
-
 ### 1. Decomposição de Séries Temporais
 
-Uma série temporal $Y_t$ é comumente assumida como a soma (ou produto) de três componentes primários. O código adota um modelo clássico, onde para um instante $t$:
-- **Tendência ($T_t$):** A direção a longo prazo em que a série está se movendo (pode ser contínua de crescimento ou queda).
-- **Sazonalidade ($S_t$):** As flutuações periódicas curtas. Resultam de fatores que acontecem numa frequência específica (como safras anuais de café).
-- **Resíduos / Ruído ($R_t$):** É a variação aleatória restante na série. O que o modelo de sazonalidade e tendência não consegue explicar.
+Uma série temporal $Y_t$ é decomposta em três componentes primários sob um modelo aditivo:
 
-**Formula do Modelo Aditivo:**
-$$ Y_t = T_t + S_t + R_t $$
+* **Tendência ($T_t$):** Direção de longo prazo.
+* **Sazonalidade ($S_t$):** Flutuações periódicas (ex: safras).
+* **Resíduos ($R_t$):** Variação aleatória (ruído).
 
-Isolando os comportamentos, os *Resíduos* ($R_t$) podem ser extraídos e analisados unicamente:
-$$ R_t = Y_t - T_t - S_t $$
-*(Obs: Se a variação sazonal aumentar proporcionalmente com o nível da série, um modelo **Multiplicativo** ($Y_t = T_t \times S_t \times R_t$) seria preferido).*
+**Modelo Aditivo:**
+$$Y_t = T_t + S_t + R_t$$
+
+**Extração de Resíduos:**
+$$R_t = Y_t - T_t - S_t$$
+
+> **Nota:** Se a variação aumenta proporcionalmente ao nível da série, utiliza-se o modelo **Multiplicativo**: $Y_t = T_t \times S_t \times R_t$.
 
 ### 2. Estacionaridade
 
-Uma premissa de diversos modelos preditivos (como ARIMA) é que os dados devem ser **Estacionários**. Uma série é dita estacionária quando as suas propriedades estatísticas (como média e variância) não mudam com o tempo. Ou seja, ela oscila em volta de uma média constante sem tendência evidente.
+Uma série é **estacionária** quando suas propriedades estatísticas (média e variância) são constantes ao longo do tempo, oscilando em torno de um equilíbrio sem tendências estruturais.
 
 ### 3. Teste de Dickey-Fuller Aumentado (ADF)
 
-No código, foi importado e utilizado via `statsmodels.tsa.stattools.adfuller`. O Teste ADF avalia a presença de uma "raiz unitária" em uma amostra de série temporal. Uma raiz unitária sugere que a série é influenciada pela tendência ao longo do tempo (logo, Não-Estacionária).
+O Teste ADF avalia a presença de uma raiz unitária. O modelo de regressão utilizado é:
 
-O ADF encaixa o próximo modelo de regressão para investigar a diferenciação da série:
-$$ \Delta Y_t = \alpha + \beta t + \gamma Y_{t-1} + \sum_{j=1}^{p} \delta_j \Delta Y_{t-j} + \epsilon_t $$
+$$\Delta Y_t = \alpha + \beta t + \gamma Y_{t-1} + \sum_{j=1}^{p} \delta_j \Delta Y_{t-j} + \epsilon_t$$
 
-Onde:
+**Onde:**
 * $\Delta Y_t$: Primeira diferença ($Y_t - Y_{t-1}$)
 * $\alpha$: Constante
-* $\beta t$: O coeficiente de uma tendência temporal.
-* $\epsilon_t$: O erro aleatório branco.
+* $\beta t$: Coeficiente de tendência temporal
+* $\epsilon_t$: Erro aleatório (ruído branco)
 
-**Hipóteses do Teste:**
-* **$H_0$ (Hipótese Nula):** $\gamma = 0$. A série tem raiz unitária, o que a torna **não-estacionária**.
-* **$H_1$ (Hipótese Alternativa):** $\gamma < 0$. A série **é estacionária**.
+**Hipóteses:**
+* **$H_0$ (Nula):** $\gamma = 0$. A série possui raiz unitária (**Não-estacionária**).
+* **$H_1$ (Alternativa):** $\gamma < 0$. A série **é estacionária**.
 
-Assim, se o valor final da probabilidade (p-valor) que o código informa for **maior** do que um nível de significância (geralmente $0.05$), você aceita que a série **NÃO** é estacionária (ex: "Série NÃO estacionária (p=0.9975)"). 
+### 4. Diferenciação (Ordem $d$)
 
-### 4. Diferenciação (Ordem de integração, `d`)
+Para converter uma série não-estacionária em estacionária, aplica-se a diferenciação para estabilizar a média:
 
-No momento que o teste ADF aponta uma série *não-estacionária*, o raciocínio é eliminar a tendência fazendo com que a série passe a ter variância constante. Como visto nas saídas do Jupyter: `Estacionarizada com Ordem 2 (p=0.0000)`.
-Esse processo se chama **Diferenciação**.
-
-* **Diferenciação de Ordem 1 ($d=1$):** Substitui cada valor de $Y_t$ pela subtração em relação ao momento anterior:
-  $$ Y'_t = Y_t - Y_{t-1} $$
-* **Diferenciação de Ordem 2 ($d=2$):** Aplicada quando a ordem 1 falha. Faz-se a diferença das diferenças contínuas:
-  $$ Y''_t = Y'_t - Y'_{t-1} = (Y_t - Y_{t-1}) - (Y_{t-1} - Y_{t-2}) = Y_t - 2Y_{t-1} + Y_{t-2} $$
-
-Tornar a sua série estacionária por estas transformações abre caminho para que a Região identificada possa usar um modelo ARIMA(p,d,q) com hiperparâretro de integração `d` recém-encontrado.
+* **Ordem 1 ($d=1$):**
+    $$Y'_t = Y_t - Y_{t-1}$$
+* **Ordem 2 ($d=2$):**
+    $$Y''_t = Y_t - 2Y_{t-1} + Y_{t-2}$$
 
 ---
+
 ## Como Executar
 
-1. Certifique-se de que os pacotes essenciais `pandas`, `matplotlib` e `statsmodels` estão instalados em seu ambiente.
-2. Atualize, se necessário, os diretórios de origem dos arquivos `.xls` no momento de instanciar o DataFrame no início do arquivo.
-3. Rode todas as células sequencialmente para extrair os gráficos de Tendência e o *output* descritivo do teste ADF na sua console.
+1.  Instale as dependências: `pandas`, `matplotlib` e `statsmodels`.
+2.  Verifique os caminhos dos arquivos `.xls` no carregamento dos DataFrames.
+3.  Execute as células do notebook sequencialmente para gerar os gráficos e resultados do teste ADF.
