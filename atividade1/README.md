@@ -24,9 +24,11 @@ Uma série temporal $Y_t$ é decomposta em três componentes primários sob um m
 * **Resíduos ($R_t$):** Variação aleatória (ruído).
 
 **Modelo Aditivo:**
+
 $$Y_t = T_t + S_t + R_t$$
 
 **Extração de Resíduos:**
+
 $$R_t = Y_t - T_t - S_t$$
 
 > **Nota:** Se a variação aumenta proporcionalmente ao nível da série, utiliza-se o modelo **Multiplicativo**: $Y_t = T_t \times S_t \times R_t$.
@@ -42,12 +44,14 @@ O Teste ADF avalia a presença de uma raiz unitária. O modelo de regressão uti
 $$\Delta Y_t = \alpha + \beta t + \gamma Y_{t-1} + \sum_{j=1}^{p} \delta_j \Delta Y_{t-j} + \epsilon_t$$
 
 **Onde:**
+
 * $\Delta Y_t$: Primeira diferença ($Y_t - Y_{t-1}$)
 * $\alpha$: Constante
 * $\beta t$: Coeficiente de tendência temporal
 * $\epsilon_t$: Erro aleatório (ruído branco)
 
 **Hipóteses:**
+
 * **$H_0$ (Nula):** $\gamma = 0$. A série possui raiz unitária (**Não-estacionária**).
 * **$H_1$ (Alternativa):** $\gamma < 0$. A série **é estacionária**.
 
