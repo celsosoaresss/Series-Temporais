@@ -1,0 +1,218 @@
+[
+  {
+    "cen\u00e1rio":"pontual 10%",
+    "m\u00e9todo":"BERT (proposto)",
+    "MAE":0.1314966381,
+    "RMSE":0.2066618502,
+    "MAE_kW":14.942155838,
+    "RMSE_kW":47.6717224121,
+    "MRE":0.0446447507
+  },
+  {
+    "cen\u00e1rio":"pontual 10%",
+    "m\u00e9todo":"m\u00e9dia da janela",
+    "MAE":0.7789434791,
+    "RMSE":0.923940599,
+    "MAE_kW":106.886756897,
+    "RMSE_kW":308.9569702148,
+    "MRE":0.3193604052
+  },
+  {
+    "cen\u00e1rio":"pontual 10%",
+    "m\u00e9todo":"\u00faltimo valor (ffill)",
+    "MAE":0.2929083109,
+    "RMSE":0.4686136544,
+    "MAE_kW":35.6963577271,
+    "RMSE_kW":145.3563537598,
+    "MRE":0.1066549569
+  },
+  {
+    "cen\u00e1rio":"pontual 10%",
+    "m\u00e9todo":"interpola\u00e7\u00e3o linear",
+    "MAE":0.1841454506,
+    "RMSE":0.2884349525,
+    "MAE_kW":21.5006427765,
+    "RMSE_kW":78.1608810425,
+    "MRE":0.0642404556
+  },
+  {
+    "cen\u00e1rio":"pontual 25%",
+    "m\u00e9todo":"BERT (proposto)",
+    "MAE":0.1372668445,
+    "RMSE":0.211413011,
+    "MAE_kW":15.3225259781,
+    "RMSE_kW":47.0040092468,
+    "MRE":0.0458703265
+  },
+  {
+    "cen\u00e1rio":"pontual 25%",
+    "m\u00e9todo":"m\u00e9dia da janela",
+    "MAE":0.7808077335,
+    "RMSE":0.9249996543,
+    "MAE_kW":106.731842041,
+    "RMSE_kW":306.4373168945,
+    "MRE":0.3195180893
+  },
+  {
+    "cen\u00e1rio":"pontual 25%",
+    "m\u00e9todo":"\u00faltimo valor (ffill)",
+    "MAE":0.3313035667,
+    "RMSE":0.5310633779,
+    "MAE_kW":40.6077079773,
+    "RMSE_kW":169.0464324951,
+    "MRE":0.1215653867
+  },
+  {
+    "cen\u00e1rio":"pontual 25%",
+    "m\u00e9todo":"interpola\u00e7\u00e3o linear",
+    "MAE":0.2056171,
+    "RMSE":0.3170174956,
+    "MAE_kW":24.4568405151,
+    "RMSE_kW":90.7781066895,
+    "MRE":0.0732152909
+  },
+  {
+    "cen\u00e1rio":"pontual 50%",
+    "m\u00e9todo":"BERT (proposto)",
+    "MAE":0.1558124423,
+    "RMSE":0.2384219319,
+    "MAE_kW":17.1185665131,
+    "RMSE_kW":53.0241737366,
+    "MRE":0.051388111
+  },
+  {
+    "cen\u00e1rio":"pontual 50%",
+    "m\u00e9todo":"m\u00e9dia da janela",
+    "MAE":0.7819069624,
+    "RMSE":0.9274206758,
+    "MAE_kW":106.700302124,
+    "RMSE_kW":304.3590393066,
+    "MRE":0.3203029335
+  },
+  {
+    "cen\u00e1rio":"pontual 50%",
+    "m\u00e9todo":"\u00faltimo valor (ffill)",
+    "MAE":0.434859097,
+    "RMSE":0.6901565194,
+    "MAE_kW":53.9972343445,
+    "RMSE_kW":215.5193023682,
+    "MRE":0.1620939374
+  },
+  {
+    "cen\u00e1rio":"pontual 50%",
+    "m\u00e9todo":"interpola\u00e7\u00e3o linear",
+    "MAE":0.2696673274,
+    "RMSE":0.4126706719,
+    "MAE_kW":33.0211830139,
+    "RMSE_kW":119.8083190918,
+    "MRE":0.0991260707
+  },
+  {
+    "cen\u00e1rio":"bloco 10%",
+    "m\u00e9todo":"BERT (proposto)",
+    "MAE":0.1726593673,
+    "RMSE":0.2755338252,
+    "MAE_kW":18.9178752899,
+    "RMSE_kW":61.4632759094,
+    "MRE":0.0578629673
+  },
+  {
+    "cen\u00e1rio":"bloco 10%",
+    "m\u00e9todo":"m\u00e9dia da janela",
+    "MAE":0.7883704901,
+    "RMSE":0.9344150424,
+    "MAE_kW":106.6181945801,
+    "RMSE_kW":310.108001709,
+    "MRE":0.3261066675
+  },
+  {
+    "cen\u00e1rio":"bloco 10%",
+    "m\u00e9todo":"\u00faltimo valor (ffill)",
+    "MAE":0.7727970481,
+    "RMSE":1.1011674404,
+    "MAE_kW":107.8578186035,
+    "RMSE_kW":403.4507446289,
+    "MRE":0.3298982382
+  },
+  {
+    "cen\u00e1rio":"bloco 10%",
+    "m\u00e9todo":"interpola\u00e7\u00e3o linear",
+    "MAE":0.566039443,
+    "RMSE":0.8192193508,
+    "MAE_kW":73.3841247559,
+    "RMSE_kW":274.4500732422,
+    "MRE":0.2244556099
+  },
+  {
+    "cen\u00e1rio":"bloco 25%",
+    "m\u00e9todo":"BERT (proposto)",
+    "MAE":0.17563954,
+    "RMSE":0.2738939822,
+    "MAE_kW":19.0449905396,
+    "RMSE_kW":65.0216140747,
+    "MRE":0.058093898
+  },
+  {
+    "cen\u00e1rio":"bloco 25%",
+    "m\u00e9todo":"m\u00e9dia da janela",
+    "MAE":0.7987185717,
+    "RMSE":0.944558084,
+    "MAE_kW":105.9322967529,
+    "RMSE_kW":300.2816772461,
+    "MRE":0.3231306672
+  },
+  {
+    "cen\u00e1rio":"bloco 25%",
+    "m\u00e9todo":"\u00faltimo valor (ffill)",
+    "MAE":0.7808647752,
+    "RMSE":1.1090141535,
+    "MAE_kW":102.8162002563,
+    "RMSE_kW":379.1069335938,
+    "MRE":0.3136254549
+  },
+  {
+    "cen\u00e1rio":"bloco 25%",
+    "m\u00e9todo":"interpola\u00e7\u00e3o linear",
+    "MAE":0.5756059289,
+    "RMSE":0.8321355581,
+    "MAE_kW":72.9034423828,
+    "RMSE_kW":261.0111694336,
+    "MRE":0.2223810703
+  },
+  {
+    "cen\u00e1rio":"bloco 50%",
+    "m\u00e9todo":"BERT (proposto)",
+    "MAE":0.1876633465,
+    "RMSE":0.2977486253,
+    "MAE_kW":20.2984104156,
+    "RMSE_kW":62.9407958984,
+    "MRE":0.0608276762
+  },
+  {
+    "cen\u00e1rio":"bloco 50%",
+    "m\u00e9todo":"m\u00e9dia da janela",
+    "MAE":0.797187686,
+    "RMSE":0.9492642283,
+    "MAE_kW":107.6412200928,
+    "RMSE_kW":305.6145019531,
+    "MRE":0.3225654066
+  },
+  {
+    "cen\u00e1rio":"bloco 50%",
+    "m\u00e9todo":"\u00faltimo valor (ffill)",
+    "MAE":0.7863721251,
+    "RMSE":1.1161606312,
+    "MAE_kW":101.0263977051,
+    "RMSE_kW":350.5944213867,
+    "MRE":0.3027429581
+  },
+  {
+    "cen\u00e1rio":"bloco 50%",
+    "m\u00e9todo":"interpola\u00e7\u00e3o linear",
+    "MAE":0.5758362412,
+    "RMSE":0.8318451643,
+    "MAE_kW":72.4612426758,
+    "RMSE_kW":244.9703674316,
+    "MRE":0.217142567
+  }
+]
