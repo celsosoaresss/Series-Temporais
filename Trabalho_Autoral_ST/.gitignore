@@ -1,0 +1,10 @@
+# Dataset bruto UCI (~679 MB, acima do limite de 100 MB do GitHub)
+# Baixe de: https://archive.ics.uci.edu/dataset/321/electricityloaddiagrams20112014
+LD2011_2014.txt
+
+# Bytecode Python
+__pycache__/
+*.pyc
+
+# Configurações locais do editor / Claude
+.claude/

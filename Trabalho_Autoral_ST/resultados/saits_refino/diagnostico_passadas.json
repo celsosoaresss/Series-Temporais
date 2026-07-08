@@ -1,0 +1,32 @@
+{
+  "pontual 10%":{
+    "passada 1":0.1261720061,
+    "passada 2 (final)":0.1279438585,
+    "Δ% da 2ª passada":1.4043149732
+  },
+  "pontual 25%":{
+    "passada 1":0.1346680671,
+    "passada 2 (final)":0.1330271512,
+    "Δ% da 2ª passada":-1.2184892128
+  },
+  "pontual 50%":{
+    "passada 1":0.1542988569,
+    "passada 2 (final)":0.1487052739,
+    "Δ% da 2ª passada":-3.6251616518
+  },
+  "bloco 10%":{
+    "passada 1":0.1720317304,
+    "passada 2 (final)":0.1717692316,
+    "Δ% da 2ª passada":-0.1525874645
+  },
+  "bloco 25%":{
+    "passada 1":0.1746693105,
+    "passada 2 (final)":0.1737458706,
+    "Δ% da 2ª passada":-0.5286789408
+  },
+  "bloco 50%":{
+    "passada 1":0.1873518229,
+    "passada 2 (final)":0.1831321567,
+    "Δ% da 2ª passada":-2.2522685177
+  }
+}

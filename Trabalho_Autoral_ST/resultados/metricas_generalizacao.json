@@ -1,0 +1,191 @@
+[
+  {
+    "dataset":"Air-Quality",
+    "método":"BERT+FFT segmentada (nosso)",
+    "MAE":0.13592273,
+    "RMSE":0.4610170126,
+    "MRE":0.1921071857
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"Median (nosso protocolo)",
+    "MAE":0.6950718164,
+    "RMSE":1.0977063179,
+    "MRE":0.9823838472
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"Last (nosso protocolo)",
+    "MAE":0.2103728205,
+    "RMSE":0.5914686918,
+    "MRE":0.297331661
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"Median (artigo)",
+    "MAE":0.763,
+    "RMSE":1.175,
+    "MRE":1.074
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"Last (artigo)",
+    "MAE":0.967,
+    "RMSE":1.408,
+    "MRE":1.363
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"BRITS (artigo)",
+    "MAE":0.153,
+    "RMSE":0.525,
+    "MRE":0.216
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"Transformer (artigo)",
+    "MAE":0.158,
+    "RMSE":0.521,
+    "MRE":0.223
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"SAITS-base (artigo)",
+    "MAE":0.146,
+    "RMSE":0.521,
+    "MRE":0.206
+  },
+  {
+    "dataset":"Air-Quality",
+    "método":"SAITS (artigo)",
+    "MAE":0.137,
+    "RMSE":0.518,
+    "MRE":0.193
+  },
+  {
+    "dataset":"ETT",
+    "método":"BERT+FFT segmentada (nosso)",
+    "MAE":0.116662614,
+    "RMSE":0.1836965382,
+    "MRE":0.1119621992
+  },
+  {
+    "dataset":"ETT",
+    "método":"Median (nosso protocolo)",
+    "MAE":0.9977378249,
+    "RMSE":1.4272013903,
+    "MRE":0.9575383067
+  },
+  {
+    "dataset":"ETT",
+    "método":"Last (nosso protocolo)",
+    "MAE":0.1646914482,
+    "RMSE":0.3714112639,
+    "MRE":0.1580559164
+  },
+  {
+    "dataset":"ETT",
+    "método":"Median (artigo)",
+    "MAE":1.145,
+    "RMSE":1.847,
+    "MRE":1.391
+  },
+  {
+    "dataset":"ETT",
+    "método":"Last (artigo)",
+    "MAE":1.007,
+    "RMSE":1.365,
+    "MRE":0.964
+  },
+  {
+    "dataset":"ETT",
+    "método":"BRITS (artigo)",
+    "MAE":0.13,
+    "RMSE":0.259,
+    "MRE":0.125
+  },
+  {
+    "dataset":"ETT",
+    "método":"Transformer (artigo)",
+    "MAE":0.114,
+    "RMSE":0.173,
+    "MRE":0.109
+  },
+  {
+    "dataset":"ETT",
+    "método":"SAITS-base (artigo)",
+    "MAE":0.121,
+    "RMSE":0.197,
+    "MRE":0.116
+  },
+  {
+    "dataset":"ETT",
+    "método":"SAITS (artigo)",
+    "MAE":0.092,
+    "RMSE":0.139,
+    "MRE":0.088
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"BERT+FFT segmentada (nosso)",
+    "MAE":0.3189525604,
+    "RMSE":0.5702602863,
+    "MRE":0.4572010338
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"Median (nosso protocolo)",
+    "MAE":0.680966258,
+    "RMSE":0.9909096956,
+    "MRE":0.9761278629
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"Last (nosso protocolo)",
+    "MAE":0.4101362824,
+    "RMSE":0.7658270597,
+    "MRE":0.5879079103
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"Median (artigo)",
+    "MAE":0.726,
+    "RMSE":0.988,
+    "MRE":1.035
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"Last (artigo)",
+    "MAE":0.862,
+    "RMSE":1.207,
+    "MRE":1.23
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"BRITS (artigo)",
+    "MAE":0.256,
+    "RMSE":0.767,
+    "MRE":0.365
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"Transformer (artigo)",
+    "MAE":0.19,
+    "RMSE":0.445,
+    "MRE":0.269
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"SAITS-base (artigo)",
+    "MAE":0.192,
+    "RMSE":0.439,
+    "MRE":0.273
+  },
+  {
+    "dataset":"PhysioNet-2012",
+    "método":"SAITS (artigo)",
+    "MAE":0.186,
+    "RMSE":0.431,
+    "MRE":0.266
+  }
+]

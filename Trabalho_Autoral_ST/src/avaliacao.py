@@ -56,20 +56,24 @@ def avaliar_metodos(
     medias: np.ndarray | None = None,
     batch: int = 256,
 ) -> pd.DataFrame:
-    """Avalia o modelo e os baselines nos mesmos cenários de máscara.
+    """Avalia modelo(s) e os baselines nos mesmos cenários de máscara.
 
     janelas  – array (N, L), já normalizado
+    modelo   – um módulo único (avaliado como "BERT (proposto)") OU um dict
+      {nome: módulo} para comparar vários modelos no mesmo protocolo
     cenarios – lista de tuplas (nome, tipo, razao); tipo em {'pontual','bloco'}
     desvios/medias – arrays (N,) com o desvio/média da série de origem de
       cada janela, para reportar métricas também na escala original.
     Retorna DataFrame longo: cenário × método × métricas.
     """
     x = torch.from_numpy(np.ascontiguousarray(janelas, dtype="float32"))
+    modelos = modelo if isinstance(modelo, dict) else {"BERT (proposto)": modelo}
     linhas = []
     for nome_c, tipo, razao in cenarios:
         masc = mascaras_avaliacao(len(x), x.shape[1], tipo, razao, semente=semente)
         metodos = {
-            "BERT (proposto)": lambda xx, mm: imputar_bert_lotes(modelo, xx, mm, device, batch)
+            nome: (lambda xx, mm, m=m: imputar_bert_lotes(m, xx, mm, device, batch))
+            for nome, m in modelos.items()
         }
         metodos.update(BASELINES)
         for nome_m, fn in metodos.items():

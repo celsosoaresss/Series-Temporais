@@ -1,0 +1,32 @@
+{
+  "pontual 10%":{
+    "espectro real":0.132405594,
+    "token zerado":0.1367520392,
+    "espectro trocado":0.1339970082
+  },
+  "pontual 25%":{
+    "espectro real":0.1369987577,
+    "token zerado":0.141703248,
+    "espectro trocado":0.13894777
+  },
+  "pontual 50%":{
+    "espectro real":0.1573131233,
+    "token zerado":0.1622386575,
+    "espectro trocado":0.1595022529
+  },
+  "bloco 10%":{
+    "espectro real":0.1748808026,
+    "token zerado":0.1888049841,
+    "espectro trocado":0.1811214387
+  },
+  "bloco 25%":{
+    "espectro real":0.1770537347,
+    "token zerado":0.1919029504,
+    "espectro trocado":0.1843761504
+  },
+  "bloco 50%":{
+    "espectro real":0.190291658,
+    "token zerado":0.2037568986,
+    "espectro trocado":0.1973796934
+  }
+}

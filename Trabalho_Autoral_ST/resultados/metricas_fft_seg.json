@@ -1,0 +1,488 @@
+[
+  {
+    "cenário":"pontual 10%",
+    "método":"BERT",
+    "MAE":0.1193254143,
+    "RMSE":0.1965659112,
+    "MAE_kW":13.0908679962,
+    "RMSE_kW":46.0737495422,
+    "MRE":0.0391134024
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"BERT+FFT (padrão)",
+    "MAE":0.1150392666,
+    "RMSE":0.1910472214,
+    "MAE_kW":12.3009243011,
+    "RMSE_kW":43.2958869934,
+    "MRE":0.0367531776
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"BERT+FFT (segmentada)",
+    "MAE":0.1152652651,
+    "RMSE":0.1913972646,
+    "MAE_kW":12.4099731445,
+    "RMSE_kW":44.614616394,
+    "MRE":0.037078999
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"SAITS (DMSA+ORT)",
+    "MAE":0.1147327051,
+    "RMSE":0.1895209849,
+    "MAE_kW":12.4381370544,
+    "RMSE_kW":43.645652771,
+    "MRE":0.0371631496
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"SAITS-FFT (padrão)",
+    "MAE":0.1152764559,
+    "RMSE":0.1899115741,
+    "MAE_kW":12.3658065796,
+    "RMSE_kW":42.9505004883,
+    "MRE":0.0369470343
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"SAITS-FFT (segmentada)",
+    "MAE":0.1148896664,
+    "RMSE":0.1897851527,
+    "MAE_kW":12.3252754211,
+    "RMSE_kW":43.6735229492,
+    "MRE":0.0368259363
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"média da janela",
+    "MAE":0.7789434791,
+    "RMSE":0.923940599,
+    "MAE_kW":106.886756897,
+    "RMSE_kW":308.9569702148,
+    "MRE":0.3193604052
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"último valor (ffill)",
+    "MAE":0.2929083109,
+    "RMSE":0.4686136544,
+    "MAE_kW":35.6963577271,
+    "RMSE_kW":145.3563537598,
+    "MRE":0.1066549569
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"interpolação linear",
+    "MAE":0.1841454506,
+    "RMSE":0.2884349525,
+    "MAE_kW":21.5006427765,
+    "RMSE_kW":78.1608810425,
+    "MRE":0.0642404556
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"BERT",
+    "MAE":0.1244035438,
+    "RMSE":0.1976696551,
+    "MAE_kW":13.3662443161,
+    "RMSE_kW":43.1870269775,
+    "MRE":0.0400138982
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"BERT+FFT (padrão)",
+    "MAE":0.1208750829,
+    "RMSE":0.1931844205,
+    "MAE_kW":12.7871627808,
+    "RMSE_kW":41.7676887512,
+    "MRE":0.0382803269
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"BERT+FFT (segmentada)",
+    "MAE":0.1207095608,
+    "RMSE":0.1925794929,
+    "MAE_kW":12.743522644,
+    "RMSE_kW":42.1089744568,
+    "MRE":0.0381496847
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"SAITS (DMSA+ORT)",
+    "MAE":0.1206170246,
+    "RMSE":0.1914029568,
+    "MAE_kW":12.9491472244,
+    "RMSE_kW":42.4144210815,
+    "MRE":0.0387652516
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"SAITS-FFT (padrão)",
+    "MAE":0.1207883358,
+    "RMSE":0.1932377517,
+    "MAE_kW":12.8812484741,
+    "RMSE_kW":41.9725570679,
+    "MRE":0.0385619886
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"SAITS-FFT (segmentada)",
+    "MAE":0.1208225563,
+    "RMSE":0.1936582178,
+    "MAE_kW":12.8859443665,
+    "RMSE_kW":41.9094161987,
+    "MRE":0.0385760441
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"média da janela",
+    "MAE":0.7808077335,
+    "RMSE":0.9249996543,
+    "MAE_kW":106.731842041,
+    "RMSE_kW":306.4373168945,
+    "MRE":0.3195180893
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"último valor (ffill)",
+    "MAE":0.3313035667,
+    "RMSE":0.5310633779,
+    "MAE_kW":40.6077079773,
+    "RMSE_kW":169.0464324951,
+    "MRE":0.1215653867
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"interpolação linear",
+    "MAE":0.2056171,
+    "RMSE":0.3170174956,
+    "MAE_kW":24.4568405151,
+    "RMSE_kW":90.7781066895,
+    "MRE":0.0732152909
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"BERT",
+    "MAE":0.1427935064,
+    "RMSE":0.2247472256,
+    "MAE_kW":15.3833255768,
+    "RMSE_kW":50.1834831238,
+    "MRE":0.0461791046
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"BERT+FFT (padrão)",
+    "MAE":0.1404533386,
+    "RMSE":0.2210914642,
+    "MAE_kW":15.0254821777,
+    "RMSE_kW":49.5157699585,
+    "MRE":0.0451048948
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"BERT+FFT (segmentada)",
+    "MAE":0.1392292678,
+    "RMSE":0.2194274664,
+    "MAE_kW":14.8539409637,
+    "RMSE_kW":49.1625671387,
+    "MRE":0.0445899479
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"SAITS (DMSA+ORT)",
+    "MAE":0.1388480514,
+    "RMSE":0.2186900228,
+    "MAE_kW":14.9147901535,
+    "RMSE_kW":48.5899505615,
+    "MRE":0.0447726101
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"SAITS-FFT (padrão)",
+    "MAE":0.1396326721,
+    "RMSE":0.220439598,
+    "MAE_kW":14.9472522736,
+    "RMSE_kW":48.5268440247,
+    "MRE":0.0448700562
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"SAITS-FFT (segmentada)",
+    "MAE":0.1399097294,
+    "RMSE":0.2214457095,
+    "MAE_kW":15.0320796967,
+    "RMSE_kW":48.9026069641,
+    "MRE":0.0451246984
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"média da janela",
+    "MAE":0.7819069624,
+    "RMSE":0.9274206758,
+    "MAE_kW":106.700302124,
+    "RMSE_kW":304.3590393066,
+    "MRE":0.3203029335
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"último valor (ffill)",
+    "MAE":0.434859097,
+    "RMSE":0.6901565194,
+    "MAE_kW":53.9972343445,
+    "RMSE_kW":215.5193023682,
+    "MRE":0.1620939374
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"interpolação linear",
+    "MAE":0.2696673274,
+    "RMSE":0.4126706719,
+    "MAE_kW":33.0211830139,
+    "RMSE_kW":119.8083190918,
+    "MRE":0.0991260707
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"BERT",
+    "MAE":0.1603556722,
+    "RMSE":0.26299721,
+    "MAE_kW":17.0417900085,
+    "RMSE_kW":57.6190719604,
+    "MRE":0.0521246977
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"BERT+FFT (padrão)",
+    "MAE":0.1559130996,
+    "RMSE":0.2562361956,
+    "MAE_kW":16.4990749359,
+    "RMSE_kW":55.8662872314,
+    "MRE":0.050464727
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"BERT+FFT (segmentada)",
+    "MAE":0.1562411338,
+    "RMSE":0.2565882802,
+    "MAE_kW":16.561882019,
+    "RMSE_kW":56.4325828552,
+    "MRE":0.0506568328
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"SAITS (DMSA+ORT)",
+    "MAE":0.1575345099,
+    "RMSE":0.2589462101,
+    "MAE_kW":16.6663017273,
+    "RMSE_kW":56.3623275757,
+    "MRE":0.0509762093
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"SAITS-FFT (padrão)",
+    "MAE":0.1563456208,
+    "RMSE":0.2555438578,
+    "MAE_kW":16.6030235291,
+    "RMSE_kW":56.4007949829,
+    "MRE":0.0507826693
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"SAITS-FFT (segmentada)",
+    "MAE":0.1567061394,
+    "RMSE":0.2563585639,
+    "MAE_kW":16.6791038513,
+    "RMSE_kW":56.6742858887,
+    "MRE":0.0510153696
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"média da janela",
+    "MAE":0.7883704901,
+    "RMSE":0.9344150424,
+    "MAE_kW":106.6181945801,
+    "RMSE_kW":310.108001709,
+    "MRE":0.3261066675
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"último valor (ffill)",
+    "MAE":0.7727970481,
+    "RMSE":1.1011674404,
+    "MAE_kW":107.8578186035,
+    "RMSE_kW":403.4507446289,
+    "MRE":0.3298982382
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"interpolação linear",
+    "MAE":0.566039443,
+    "RMSE":0.8192193508,
+    "MAE_kW":73.3841247559,
+    "RMSE_kW":274.4500732422,
+    "MRE":0.2244556099
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"BERT",
+    "MAE":0.1627744138,
+    "RMSE":0.2593808174,
+    "MAE_kW":17.3870391846,
+    "RMSE_kW":63.2892456055,
+    "MRE":0.0530365668
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"BERT+FFT (padrão)",
+    "MAE":0.1586811393,
+    "RMSE":0.2530198395,
+    "MAE_kW":16.763917923,
+    "RMSE_kW":60.2180976868,
+    "MRE":0.0511358269
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"BERT+FFT (segmentada)",
+    "MAE":0.1588831395,
+    "RMSE":0.2527037263,
+    "MAE_kW":16.7579097748,
+    "RMSE_kW":59.3039016724,
+    "MRE":0.0511175022
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"SAITS (DMSA+ORT)",
+    "MAE":0.1598959118,
+    "RMSE":0.2544244826,
+    "MAE_kW":17.0575580597,
+    "RMSE_kW":61.9376869202,
+    "MRE":0.0520315357
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"SAITS-FFT (padrão)",
+    "MAE":0.1590259522,
+    "RMSE":0.2537377775,
+    "MAE_kW":16.8048744202,
+    "RMSE_kW":60.5754089355,
+    "MRE":0.0512607582
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"SAITS-FFT (segmentada)",
+    "MAE":0.1590330005,
+    "RMSE":0.2532534003,
+    "MAE_kW":16.8650970459,
+    "RMSE_kW":60.6834716797,
+    "MRE":0.0514444634
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"média da janela",
+    "MAE":0.7987185717,
+    "RMSE":0.944558084,
+    "MAE_kW":105.9322967529,
+    "RMSE_kW":300.2816772461,
+    "MRE":0.3231306672
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"último valor (ffill)",
+    "MAE":0.7808647752,
+    "RMSE":1.1090141535,
+    "MAE_kW":102.8162002563,
+    "RMSE_kW":379.1069335938,
+    "MRE":0.3136254549
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"interpolação linear",
+    "MAE":0.5756059289,
+    "RMSE":0.8321355581,
+    "MAE_kW":72.9034423828,
+    "RMSE_kW":261.0111694336,
+    "MRE":0.2223810703
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"BERT",
+    "MAE":0.173739031,
+    "RMSE":0.2794380784,
+    "MAE_kW":18.5823040009,
+    "RMSE_kW":59.8289222717,
+    "MRE":0.0556850694
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"BERT+FFT (padrão)",
+    "MAE":0.1708615869,
+    "RMSE":0.2753500938,
+    "MAE_kW":18.0909461975,
+    "RMSE_kW":58.0875396729,
+    "MRE":0.0542126298
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"BERT+FFT (segmentada)",
+    "MAE":0.1698246002,
+    "RMSE":0.2732756436,
+    "MAE_kW":18.0315742493,
+    "RMSE_kW":57.2373313904,
+    "MRE":0.0540347099
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"SAITS (DMSA+ORT)",
+    "MAE":0.1708684117,
+    "RMSE":0.2751671076,
+    "MAE_kW":18.3075523376,
+    "RMSE_kW":59.625213623,
+    "MRE":0.0548617281
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"SAITS-FFT (padrão)",
+    "MAE":0.1707792878,
+    "RMSE":0.2755975723,
+    "MAE_kW":18.1739215851,
+    "RMSE_kW":59.0554656982,
+    "MRE":0.0544612817
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"SAITS-FFT (segmentada)",
+    "MAE":0.1711200327,
+    "RMSE":0.2772604823,
+    "MAE_kW":18.1658802032,
+    "RMSE_kW":58.8382530212,
+    "MRE":0.0544371866
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"média da janela",
+    "MAE":0.797187686,
+    "RMSE":0.9492642283,
+    "MAE_kW":107.6412200928,
+    "RMSE_kW":305.6145019531,
+    "MRE":0.3225654066
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"último valor (ffill)",
+    "MAE":0.7863721251,
+    "RMSE":1.1161606312,
+    "MAE_kW":101.0263977051,
+    "RMSE_kW":350.5944213867,
+    "MRE":0.3027429581
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"interpolação linear",
+    "MAE":0.5758362412,
+    "RMSE":0.8318451643,
+    "MAE_kW":72.4612426758,
+    "RMSE_kW":244.9703674316,
+    "MRE":0.217142567
+  }
+]

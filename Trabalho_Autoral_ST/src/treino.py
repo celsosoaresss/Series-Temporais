@@ -26,6 +26,30 @@ def perda_mascarada(pred: torch.Tensor, alvo: torch.Tensor, mascara: torch.Tenso
     return erro[mascara].mean()
 
 
+def perda_mit_ort(pred: torch.Tensor, alvo: torch.Tensor, mascara: torch.Tensor,
+                  peso_ort: float = 1.0):
+    """Perda conjunta do SAITS (Du et al., 2023): MIT + ORT.
+
+    MIT = MSE nas posições mascaradas (imputação); ORT = MSE nas posições
+    observadas (reconstrução), não-trivial graças à atenção com diagonal
+    mascarada. Usamos MSE (o SAITS original usa MAE) para manter o mesmo
+    critério do BERTImputador e isolar o efeito da arquitetura.
+    """
+    erro = (pred - alvo) ** 2
+    return erro[mascara].mean() + peso_ort * erro[~mascara].mean()
+
+
+def perda_mit_ort_passadas(preds, alvo: torch.Tensor, mascara: torch.Tensor,
+                           peso_ort: float = 1.0):
+    """`perda_mit_ort` média sobre as passadas de um modelo com refinamento
+    iterativo (forward em treino devolve tupla de reconstruções). Aceita um
+    tensor único, então também serve para modelos de passada única — análogo
+    à perda acumulada do SAITS (eq. 21), que média as representações."""
+    if torch.is_tensor(preds):
+        preds = (preds,)
+    return sum(perda_mit_ort(p, alvo, mascara, peso_ort) for p in preds) / len(preds)
+
+
 def metricas_mascaradas(pred: torch.Tensor, alvo: torch.Tensor, mascara: torch.Tensor):
     """MAE, RMSE e MRE nas posições mascaradas."""
     dif = (pred - alvo)[mascara]
@@ -36,7 +60,7 @@ def metricas_mascaradas(pred: torch.Tensor, alvo: torch.Tensor, mascara: torch.T
     return {"MAE": mae, "RMSE": rmse, "MRE": mre}
 
 
-def _epoca(modelo, loader, cfg_masc, device, rng, otimizador=None):
+def _epoca(modelo, loader, cfg_masc, device, rng, otimizador=None, fn_perda=perda_mascarada):
     treinar_flag = otimizador is not None
     modelo.train(treinar_flag)
     total, n = 0.0, 0
@@ -49,7 +73,7 @@ def _epoca(modelo, loader, cfg_masc, device, rng, otimizador=None):
         ).to(device)
         with torch.set_grad_enabled(treinar_flag):
             pred = modelo(lote, mascara)
-            perda = perda_mascarada(pred, lote, mascara)
+            perda = fn_perda(pred, lote, mascara)
         if treinar_flag:
             otimizador.zero_grad(set_to_none=True)
             perda.backward()
@@ -67,11 +91,17 @@ def treinar(
     cfg: dict,
     device: str,
     caminho_saida: str,
+    fn_perda=perda_mascarada,
 ):
     """Treina com early stopping; salva o melhor checkpoint + histórico.
 
     cfg precisa de: epocas, batch, lr, paciencia, semente,
     e cfg["mascara"] = {razao, prob_bloco, lm}.
+
+    fn_perda define o objetivo de TREINO (ex.: `perda_mit_ort` para modelos
+    tipo SAITS). A perda de VALIDAÇÃO/early stopping é sempre
+    `perda_mascarada` (só imputação), para que os históricos de modelos
+    diferentes sejam diretamente comparáveis.
     """
     fixar_semente(cfg["semente"])
     saida = Path(caminho_saida)
@@ -89,7 +119,9 @@ def treinar(
 
     historico, melhor_val, sem_melhora = [], float("inf"), 0
     for ep in range(1, cfg["epocas"] + 1):
-        perda_tr = _epoca(modelo, loader_tr, cfg["mascara"], device, rng_treino, otim)
+        perda_tr = _epoca(
+            modelo, loader_tr, cfg["mascara"], device, rng_treino, otim, fn_perda=fn_perda
+        )
         perda_val = _epoca(
             modelo, loader_val, cfg["mascara"], device,
             np.random.default_rng(rng_val_base),  # mesmas máscaras toda época

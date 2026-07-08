@@ -1,0 +1,218 @@
+[
+  {
+    "cenário":"pontual 10%",
+    "método":"BERT+FFT adversarial",
+    "MAE":0.120093815,
+    "RMSE":0.1947383434,
+    "MAE_kW":13.0461845398,
+    "RMSE_kW":44.8479614258,
+    "MRE":0.0389798954
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"média da janela",
+    "MAE":0.7789434791,
+    "RMSE":0.923940599,
+    "MAE_kW":106.886756897,
+    "RMSE_kW":308.9569702148,
+    "MRE":0.3193604052
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"último valor (ffill)",
+    "MAE":0.2929083109,
+    "RMSE":0.4686136544,
+    "MAE_kW":35.6963577271,
+    "RMSE_kW":145.3563537598,
+    "MRE":0.1066549569
+  },
+  {
+    "cenário":"pontual 10%",
+    "método":"interpolação linear",
+    "MAE":0.1841454506,
+    "RMSE":0.2884349525,
+    "MAE_kW":21.5006427765,
+    "RMSE_kW":78.1608810425,
+    "MRE":0.0642404556
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"BERT+FFT adversarial",
+    "MAE":0.1248001456,
+    "RMSE":0.1970805526,
+    "MAE_kW":13.3514642715,
+    "RMSE_kW":43.0190315247,
+    "MRE":0.0399696529
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"média da janela",
+    "MAE":0.7808077335,
+    "RMSE":0.9249996543,
+    "MAE_kW":106.731842041,
+    "RMSE_kW":306.4373168945,
+    "MRE":0.3195180893
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"último valor (ffill)",
+    "MAE":0.3313035667,
+    "RMSE":0.5310633779,
+    "MAE_kW":40.6077079773,
+    "RMSE_kW":169.0464324951,
+    "MRE":0.1215653867
+  },
+  {
+    "cenário":"pontual 25%",
+    "método":"interpolação linear",
+    "MAE":0.2056171,
+    "RMSE":0.3170174956,
+    "MAE_kW":24.4568405151,
+    "RMSE_kW":90.7781066895,
+    "MRE":0.0732152909
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"BERT+FFT adversarial",
+    "MAE":0.1429988444,
+    "RMSE":0.2243699282,
+    "MAE_kW":15.3088302612,
+    "RMSE_kW":49.8633995056,
+    "MRE":0.0459554754
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"média da janela",
+    "MAE":0.7819069624,
+    "RMSE":0.9274206758,
+    "MAE_kW":106.700302124,
+    "RMSE_kW":304.3590393066,
+    "MRE":0.3203029335
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"último valor (ffill)",
+    "MAE":0.434859097,
+    "RMSE":0.6901565194,
+    "MAE_kW":53.9972343445,
+    "RMSE_kW":215.5193023682,
+    "MRE":0.1620939374
+  },
+  {
+    "cenário":"pontual 50%",
+    "método":"interpolação linear",
+    "MAE":0.2696673274,
+    "RMSE":0.4126706719,
+    "MAE_kW":33.0211830139,
+    "RMSE_kW":119.8083190918,
+    "MRE":0.0991260707
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"BERT+FFT adversarial",
+    "MAE":0.1614701152,
+    "RMSE":0.2611521482,
+    "MAE_kW":17.2181377411,
+    "RMSE_kW":58.5634040833,
+    "MRE":0.0526640825
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"média da janela",
+    "MAE":0.7883704901,
+    "RMSE":0.9344150424,
+    "MAE_kW":106.6181945801,
+    "RMSE_kW":310.108001709,
+    "MRE":0.3261066675
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"último valor (ffill)",
+    "MAE":0.7727970481,
+    "RMSE":1.1011674404,
+    "MAE_kW":107.8578186035,
+    "RMSE_kW":403.4507446289,
+    "MRE":0.3298982382
+  },
+  {
+    "cenário":"bloco 10%",
+    "método":"interpolação linear",
+    "MAE":0.566039443,
+    "RMSE":0.8192193508,
+    "MAE_kW":73.3841247559,
+    "RMSE_kW":274.4500732422,
+    "MRE":0.2244556099
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"BERT+FFT adversarial",
+    "MAE":0.1643361002,
+    "RMSE":0.2590521276,
+    "MAE_kW":17.4730701447,
+    "RMSE_kW":63.1012229919,
+    "MRE":0.0532989912
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"média da janela",
+    "MAE":0.7987185717,
+    "RMSE":0.944558084,
+    "MAE_kW":105.9322967529,
+    "RMSE_kW":300.2816772461,
+    "MRE":0.3231306672
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"último valor (ffill)",
+    "MAE":0.7808647752,
+    "RMSE":1.1090141535,
+    "MAE_kW":102.8162002563,
+    "RMSE_kW":379.1069335938,
+    "MRE":0.3136254549
+  },
+  {
+    "cenário":"bloco 25%",
+    "método":"interpolação linear",
+    "MAE":0.5756059289,
+    "RMSE":0.8321355581,
+    "MAE_kW":72.9034423828,
+    "RMSE_kW":261.0111694336,
+    "MRE":0.2223810703
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"BERT+FFT adversarial",
+    "MAE":0.1757267714,
+    "RMSE":0.2821646929,
+    "MAE_kW":18.7024536133,
+    "RMSE_kW":59.0860099792,
+    "MRE":0.056045115
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"média da janela",
+    "MAE":0.797187686,
+    "RMSE":0.9492642283,
+    "MAE_kW":107.6412200928,
+    "RMSE_kW":305.6145019531,
+    "MRE":0.3225654066
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"último valor (ffill)",
+    "MAE":0.7863721251,
+    "RMSE":1.1161606312,
+    "MAE_kW":101.0263977051,
+    "RMSE_kW":350.5944213867,
+    "MRE":0.3027429581
+  },
+  {
+    "cenário":"bloco 50%",
+    "método":"interpolação linear",
+    "MAE":0.5758362412,
+    "RMSE":0.8318451643,
+    "MAE_kW":72.4612426758,
+    "RMSE_kW":244.9703674316,
+    "MRE":0.217142567
+  }
+]
